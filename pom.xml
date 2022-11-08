@@ -6,7 +6,7 @@
 	<packaging>maven-plugin</packaging>
 	<name>winsm-maven-plugin</name>
 	<description>winsm-maven-plugin</description>
-
+    <url>https://github.com/alotuser/winsm-maven-plugin</url>
 
 	<licenses>
 		<license>
