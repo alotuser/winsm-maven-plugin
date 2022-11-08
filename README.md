@@ -63,7 +63,7 @@
 ``` xml
    <plugin>
         <groupId>com.github.alotuser</groupId>
-        <artifactId>daemon-springboot-windows</artifactId>
+        <artifactId>winsm-maven-plugin</artifactId>
         <executions>
             <execution>
                 <phase>package</phase>
