@@ -1,4 +1,4 @@
-# 一款将 SpringBoot 项目做成Windows Service 的 Maven 插件
+# 一款将 SpringBoot 项目做成 Windows Service Wrapper 的 Maven 插件
 
 >> 包括但不限于 SpringBoot ,任何打成 java jar 包运行的 Maven 项目都可以使用
 
@@ -20,9 +20,9 @@
 ``` xml
     <plugins>
         <plugin>
-            <groupId>cn.daemon</groupId>
-            <artifactId>daemon-springboot-windows</artifactId>
-            <version>1.0.1<</version>
+            <groupId>com.alotuser</groupId>
+            <artifactId>winsm-maven-plugin</artifactId>
+            <version>0.0.1<</version>
             <executions>
                 <execution>
                     <id>make-win-service</id>
@@ -73,6 +73,7 @@
         </executions>
         <configuration>
             <isVersion>true</isVersion>
+            <winVersion>x64</isVersion>
             <vmOptions>-Xms1024m -Xmx2048m</vmOptions>
             <programArguments>--spring.profiles.active=pro --server.port=7373</programArguments>
         </configuration>
