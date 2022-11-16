@@ -28,9 +28,9 @@ public class ResourcesUtil {
 			+ "	<id>@dist.project.id@</id>\r\n"
 			+ "	<name>@dist.project.name@</name>\r\n"
 			+ "	<description>@dist.project.description@</description>\r\n"
-			+ "	<env name=\"ALOTUSER_HOME\" value=\"%BASE%\"/>\r\n"
+			+ "	<env name=\"@dist.project.name@_HOME\" value=\"%BASE%\"/>\r\n"
 			+ "	<logpath>%BASE%\\logs</logpath>\r\n"
-			+ "	<logmode>rotate</logmode>\r\n"
+			+ "	<log mode=\"rotate\"></log>\r\n"
 			+ "	<executable>java</executable>\r\n"
 			+ "	<arguments>-jar \"@dist.project.name@.jar\"</arguments>\r\n"
 			+ "</service>";
