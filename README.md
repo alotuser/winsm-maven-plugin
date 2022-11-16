@@ -23,7 +23,7 @@
         <plugin>
             <groupId>com.alotuser</groupId>
             <artifactId>winsm-maven-plugin</artifactId>
-            <version>0.0.1<</version>
+            <version>0.0.1</version>
             <executions>
                 <execution>
                     <id>make-win-service</id>
@@ -64,6 +64,7 @@
    <plugin>
         <groupId>com.github.alotuser</groupId>
         <artifactId>winsm-maven-plugin</artifactId>
+        <version>0.0.1</version>
         <executions>
             <execution>
                 <phase>package</phase>
@@ -74,7 +75,7 @@
         </executions>
         <configuration>
             <isVersion>true</isVersion>
-            <winVersion>x64</isVersion>
+            <winVersion>x64</winVersion>
             <vmOptions>-Xms1024m -Xmx2048m</vmOptions>
             <programArguments>--spring.profiles.active=pro --server.port=7373</programArguments>
         </configuration>
