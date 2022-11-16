@@ -69,7 +69,6 @@ public class WindowsServiceMojo extends AbstractMojo {
     @Parameter(property="isVersion",defaultValue = "true")
     private boolean isVersion;//是否需要版本号
     
-    
     @Parameter(property="winVersion",defaultValue = "x64")
     private String winVersion;//win版本号  x64 x86 net2 net4 net461
     
