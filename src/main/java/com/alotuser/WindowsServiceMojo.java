@@ -151,6 +151,7 @@ public class WindowsServiceMojo extends AbstractMojo {
             root.element("id").setText(artifactId);
             root.element("name").setText(jarPrefixName);
             root.element("description").setText(null == description ? "暂无描述" : description);
+            root.element("env").addAttribute("name", jarPrefixName+"_HOME");
             if (arguments.length > 0) {
                 getLog().warn("arguments 参数设置已过期,参数配置可能不会生效,请分别设置 vmOptions 参数 和 programArguments 参数");
             }
