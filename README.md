@@ -21,9 +21,9 @@
 ``` xml
     <plugins>
         <plugin>
-            <groupId>com.alotuser</groupId>
+            <groupId>com.github.alotuser</groupId>
             <artifactId>winsm-maven-plugin</artifactId>
-            <version>0.0.1</version>
+            <version>2.0.1</version>
             <executions>
                 <execution>
                     <id>make-win-service</id>
@@ -64,7 +64,7 @@
    <plugin>
         <groupId>com.github.alotuser</groupId>
         <artifactId>winsm-maven-plugin</artifactId>
-        <version>0.0.1</version>
+        <version>2.0.1</version>
         <executions>
             <execution>
                 <phase>package</phase>
