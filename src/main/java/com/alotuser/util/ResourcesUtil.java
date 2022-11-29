@@ -1,5 +1,9 @@
 package com.alotuser.util;
-
+/**
+ * ResourcesUtil
+ * @author I6view
+ *
+ */
 public class ResourcesUtil {
 
 	
