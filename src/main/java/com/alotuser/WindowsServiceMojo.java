@@ -16,10 +16,10 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
+import com.alotuser.util.ResUtil;
 import com.alotuser.util.ResourcesUtil;
 
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.io.resource.ClassPathResource;
 import cn.hutool.core.util.CharsetUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.ZipUtil;
@@ -77,7 +77,7 @@ public class WindowsServiceMojo extends AbstractMojo {
         getLog().info("开始生成 Windows Service 必要的文件");
         String wv= StrUtil.getContainsStrIgnoreCase(winVersion, "x64","x86","net2","net4","net461");
         if(null==wv) {
-        	 getLog().info("未找到winVersion"+winVersion+"例如，x64 x86 net2 net4 net461");
+        	 getLog().info("未找到winVersion"+winVersion+"，例如:x64 x86 net2 net4 net461");
         	 return;
         }
         wv=wv.toUpperCase();
@@ -106,8 +106,9 @@ public class WindowsServiceMojo extends AbstractMojo {
                 FileUtil.mkdir(logDir.getPath());
             	String jarPrefixName=getJarPrefixName(isVersion);
                 /*复制文件*/
-                ClassPathResource cpr_exe_file = new ClassPathResource("WinSW-"+wv+".exe.yml");
-                FileUtil.writeFromStream(cpr_exe_file.getStream(), new File(distDir,File.separator+jarPrefixName+".exe"));
+            	String resName=StrUtil.concat(true, "WinSW-",wv,".exe.yml");
+            	
+            	ResUtil.writeWinFile(resName, new File(distDir,File.separator+jarPrefixName+".exe"));
                 FileUtil.writeString(ResourcesUtil.README_FILE, new File(distDir, File.separator + "readme.txt"), CharsetUtil.UTF_8);
                 FileUtil.writeString(ResourcesUtil.XML_FILE, new File(distDir,File.separator+jarPrefixName+".xml"), CharsetUtil.UTF_8);
                 FileUtil.writeString(ResourcesUtil.CONFIG_FILE, new File(distDir,File.separator+jarPrefixName+".exe.config"), CharsetUtil.UTF_8);
