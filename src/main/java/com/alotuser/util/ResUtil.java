@@ -13,8 +13,8 @@ public class ResUtil {
 	/**
 	 * writeBase64File
 	 * 
-	 * @param classPath
-	 * @param writePath
+	 * @param resName resName
+	 * @param writePath writePath
 	 */
 	public static void writeBase64File(String resName, String writePath) {
 		ClassPathResource cpr = new ClassPathResource(resName);
@@ -26,8 +26,8 @@ public class ResUtil {
 	/**
 	 * writeWinFile
 	 * 
-	 * @param resName
-	 * @param dest
+	 * @param resName resName
+	 * @param dest dest
 	 */
 	public static void writeWinFile(String resName, File dest) {
 		ClassPathResource cpr = new ClassPathResource(resName);
